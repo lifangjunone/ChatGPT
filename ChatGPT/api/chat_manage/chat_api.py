@@ -50,6 +50,9 @@ class ChatStreamViewSet(Resource):
                 if index == 0:
                     continue
                 chunk_message = chunk['choices'][0]['delta']
-                yield json.dumps(chunk_message)
-        return Response(handle_stream(), content_type="application/json")
+                time.sleep(1)
+                yield f'{json.dumps(chunk_message)}\n\n'
+
+        return Response(handle_stream(), mimetype="text/event-stream")
+
 
