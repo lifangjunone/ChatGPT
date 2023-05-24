@@ -21,7 +21,7 @@ This is ChatGPT project
 |:-----------|:-------|-----------|
 | message    | string | question          |
 
- **返回示例**
+ **return example**
 
 ``` json
 {
@@ -57,7 +57,7 @@ This is ChatGPT project
 |:-----------|:-------|-----------|
 | message    | string | question          |
 
- **返回示例 [stream response]**
+ **return example [stream response]**
 
 ``` json
 {"content": "Hello"}
