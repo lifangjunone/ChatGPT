@@ -1,0 +1,14 @@
+# rp project base image
+# VERSION 1.0.0
+# MAINTAINER lifangjun <lifj@ebondhm.com>
+
+FROM python:3.9.9
+
+RUN apt-get update && apt-get install -y curl \
+&& apt-get install poppler-utils libgl1-mesa-glx -y \
+&& apt-get install -y inetutils-ping \
+&& apt-get install -y vim \
+&& echo "Asia/Shanghai" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
+
+COPY requirements.txt /tmp
+RUN pip install --no-cache-dir -i https://pypi.tuna.tsinghua.edu.cn/simple -r /tmp/requirements.txt

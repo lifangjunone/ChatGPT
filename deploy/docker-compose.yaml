@@ -1,0 +1,32 @@
+version: '3'
+services:
+  backend:
+    restart: always
+    image: registry.cn-beijing.aliyuncs.com/ebondmedcore/${CI_PROJECT_NAME}-backend:deploy-${CI_COMMIT_SHORT_SHA}
+    command: /bin/bash -c /usr/src/backend/deploy/docker-entrypoint.sh
+    container_name: ipid-backend
+    tty: true
+    logging:
+      driver: loki
+      options:
+        loki-url: "http://10.31.0.18:32600/loki/api/v1/push"
+        loki-tenant-id: "300"
+    ports:
+      - "9007:8000"
+    environment:
+      - ENVIRONMENT=development
+      - TZ=Asia/Shanghai
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_PORT=${MYSQL_PORT}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MinIO_IP_PORT=${MinIO_IP_PORT} 
+      - MinIO_ACCESS_KEY=${MinIO_ACCESS_KEY}
+      - MinIO_SECRET_KEY=${MinIO_SECRET_KEY}
+      - MinIO_SECURE=${MinIO_SECURE}
+      - BUCKET_NAME=${BUCKET_NAME}
+networks:
+  default:
+    external:
+      name: ipid
