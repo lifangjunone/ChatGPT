@@ -49,9 +49,8 @@ class ChatStreamViewSet(Resource):
             for index, chunk in enumerate(resp):
                 if index == 0:
                     continue
-                chunk_message = chunk['choices'][0]['delta']
-                time.sleep(1)
-                yield f'{json.dumps(chunk_message)}\n\n'
+                chunk_message = chunk['choices'][0]['delta']['content']
+                yield str(chunk_message) + "\n"
 
         return Response(handle_stream(), mimetype="text/event-stream")
 

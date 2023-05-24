@@ -42,11 +42,14 @@ def get_ip_address(ifname):
     import struct
 
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    return socket.inet_ntoa(fcntl.ioctl(
-        s.fileno(),
-        0x8915,
-        struct.pack('256s', ifname[:15].encode('utf-8'))
-    )[20:24])
+    try:
+        return socket.inet_ntoa(fcntl.ioctl(
+            s.fileno(),
+            0x8915,
+            struct.pack('256s', ifname[:15].encode('utf-8'))
+        )[20:24])
+    except Exception:
+        return "127.0.0.1"
 
 
 def send_mail(from_addr, mailto_list, mail_sub, mail_content, mail_host, mail_user, mail_pass, mail_port=0,
