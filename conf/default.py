@@ -69,7 +69,7 @@ class BaseConfig:
     # OpenAI配置
     # ------------------------------
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-    NET_CARD = os.getenv("OPENAI_API_KEY", 'ens33')
+    NET_CARD = os.getenv("NET_CARD", 'ens33')
     ORG_NAME = os.getenv("ORG_NAME", '')
     HOST_IP = get_ip_address(NET_CARD)
     PROXY_PROT = os.getenv("PROXY_PROT", 7890)
