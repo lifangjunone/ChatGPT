@@ -236,6 +236,22 @@ class NearExpiration(ReturnData):
         self._code = 10011
 
 
+class AIError(ReturnData):
+    """
+    success return data
+    """
+
+    def __init__(self, data, msg=None):
+        """
+        Init success params
+        Args:
+            data: return json data
+        """
+        super().__init__(data)
+        self._msg = msg if msg else "Ai error"
+        self._code = 10012
+
+
 def get_return_data(return_class, data=None, msg=None):
     """
     Simple factory methods are used to produce return value objects
