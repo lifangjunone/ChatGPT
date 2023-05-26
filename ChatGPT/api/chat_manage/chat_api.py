@@ -51,9 +51,11 @@ class ChatStreamViewSet(Resource):
                     continue
                 try:
                     chunk_message = chunk['choices'][0]['delta']['content']
-                except Exception:
+                except Exception as err:
+                    _logger.error(str(err))
                     chunk_message = chunk['choices'][0]['delta']
-                yield'id: {}\nevent: stream\ndata: {}\n\n'.format(index, chunk_message)
+                yield 'id: {}\nevent: stream\ndata: {}\n\n'.format(index, chunk_message)
+            yield 'id: {}\nevent: stream\ndata: {}\n\n'.format('-', 'small_obediently finished answering')
         return Response(handle_stream(), mimetype="text/event-stream")
 
 
