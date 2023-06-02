@@ -3,42 +3,28 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AJAX Test</title>
+  <title>Indx</title>
   <style>
-    #myDiv{
-      margin-top: 200px;
-      border: 1px solid #eee;
+    h1 {
+      text-align: center;
+    }
+    div {
+      width: 1200px;
+      height: 600px;
+      background: url("logo.png");
+      background-size: 1200px 600px;
+      text-align: center;
+      line-height: 600px;
     }
   </style>
 </head>
 
 <body>
-
-  <div id="myDiv" style="width: 500px; height: 800px; margin: auto; overflow: scroll"></div>
-
-<!--  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+  <h1>欢迎来到智能小乖乖后台</h1>
+  <div>
+    <img href="./logo.png"/>
+  </div>
   <script>
-    const evtSource = new EventSource('http://192.168.137.228:8000/api/chat_manage/message/stream?message=hello')
-      evtSource.addEventListener('message', (event) => {
-        console.log(event,'1111')
-        let text = ''
-        text += event.data
-        $("#myDiv").text(text)
-      })
-    // $(document).ready(function() {
-      // $.ajax({
-      //   url: "http://192.168.137.228:8000/api/chat_manage/message/stream?message=如何学习python",
-      //   method: "GET",
-      //   dataType: "text",
-      //   success: function(data) {
-      //     $("#myDiv").text(data);
-      //   },
-      //   error: function(xhr, status, error) {
-      //     console.log("Error: " + error);
-      //   }
-      // });
-
-    // });
   </script>
 
 </body>
