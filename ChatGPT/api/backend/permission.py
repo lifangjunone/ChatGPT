@@ -19,7 +19,7 @@ class PermissionViewSet(Resource):
                         "parentId": 1,
                         "sort": 1,
                         "type": 2,
-                        "url": "/main/system/core_tech"
+                        "url": "/main/analysis/overview"
                     },
                     {
                         "icon": "\ue66c",
@@ -29,7 +29,7 @@ class PermissionViewSet(Resource):
                         "parentId": 1,
                         "sort": 2,
                         "type": 2,
-                        "url": "/main/system/shop_statistics"
+                        "url": "/main/analysis/dashboard"
                     }
                 ],
                 "icon": "\ue612",
@@ -37,7 +37,7 @@ class PermissionViewSet(Resource):
                 "name": "系统总览",
                 "sort": 1,
                 "type": 1,
-                "url": "/main/system"
+                "url": "/main/analysis"
             },
             {
                 "children": [
@@ -49,7 +49,7 @@ class PermissionViewSet(Resource):
                         "parentId": 2,
                         "sort": 1,
                         "type": 2,
-                        "url": "/main/manage/user"
+                        "url": "/main/system/user"
                     },
                     {
                         "icon": "\ue608",
@@ -59,7 +59,7 @@ class PermissionViewSet(Resource):
                         "parentId": 2,
                         "sort": 3,
                         "type": 2,
-                        "url": "/main/manage/department"
+                        "url": "/main/system/department"
                     },
                     {
                         "icon": "\ue64d",
@@ -69,7 +69,7 @@ class PermissionViewSet(Resource):
                         "parentId": 2,
                         "sort": 4,
                         "type": 2,
-                        "url": "/main/manage/menu"
+                        "url": "/main/system/menu"
                     },
                     {
                         "icon": "\ue6a0",
@@ -79,7 +79,7 @@ class PermissionViewSet(Resource):
                         "parentId": 2,
                         "sort": 5,
                         "type": 2,
-                        "url": "/main/manage/role"
+                        "url": "/main/system/role"
                     }
                 ],
                 "icon": "\ue617",
@@ -87,7 +87,7 @@ class PermissionViewSet(Resource):
                 "name": "系统管理",
                 "sort": 2,
                 "type": 1,
-                "url": "/main/manage"
+                "url": "/main/system"
             },
             {
                 "children": [
@@ -99,7 +99,7 @@ class PermissionViewSet(Resource):
                         "parentId": 9,
                         "sort": 1,
                         "type": 2,
-                        "url": "/main/shop/shop_category"
+                        "url": "/main/product/category"
                     },
                     {
                         "icon": "\ue62b",
@@ -109,7 +109,7 @@ class PermissionViewSet(Resource):
                         "parentId": 9,
                         "sort": 3,
                         "type": 2,
-                        "url": "/main/shop/shop_info"
+                        "url": "/main/product/goods"
                     }
                 ],
                 "icon": "\ue60a",
@@ -117,7 +117,7 @@ class PermissionViewSet(Resource):
                 "name": "商品中心",
                 "sort": 3,
                 "type": 1,
-                "url": "/main/shop"
+                "url": "/main/product"
             },
             {
                 "children": [
@@ -129,7 +129,7 @@ class PermissionViewSet(Resource):
                         "parentId": 12,
                         "sort": 1,
                         "type": 2,
-                        "url": "/main/chat/your_story"
+                        "url": "/main/story/chat"
                     },
                     {
                         "icon": "\ue624",
@@ -139,7 +139,7 @@ class PermissionViewSet(Resource):
                         "parentId": 12,
                         "sort": 2,
                         "type": 2,
-                        "url": "/main/chat/story_list"
+                        "url": "/main/story/list"
                     }
                 ],
                 "icon": "\ue638",
@@ -147,7 +147,7 @@ class PermissionViewSet(Resource):
                 "name": "随便聊聊",
                 "sort": 4,
                 "type": 1,
-                "url": "/main/chat"
+                "url": "/main/story"
             }
         ]
         return get_return_data(Success, data)
