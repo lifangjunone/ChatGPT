@@ -105,7 +105,11 @@ class UsersViewSet(Resource):
                 }
             }
         ]
-        return get_return_data(Success, data)
+        return_data = {
+            'list': data,
+            'totalCount': 10
+        }
+        return get_return_data(Success, return_data)
 
     def post(self):
         return get_return_data(Success)
