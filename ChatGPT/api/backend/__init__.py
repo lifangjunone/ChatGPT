@@ -3,7 +3,7 @@ from flask import Blueprint
 from .test import TestViewSet
 from .login import LoginViewSet
 from .user import UserViewSet, UsersViewSet
-from .permission import PermissionViewSet
+from .permission import PermissionViewSet, PermissionsViewSet
 
 
 backend_manage_bp = Blueprint("backend_manage", __name__)
@@ -13,3 +13,4 @@ backend_manage.add_resource(LoginViewSet, "/login")
 backend_manage.add_resource(UserViewSet, "/user/<int:user_id>")
 backend_manage.add_resource(UsersViewSet, "/users")
 backend_manage.add_resource(PermissionViewSet, "/role/<int:role_id>")
+backend_manage.add_resource(PermissionsViewSet, "/roles")

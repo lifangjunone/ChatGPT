@@ -160,3 +160,25 @@ class PermissionViewSet(Resource):
 
     def patch(self):
         return get_return_data(Success)
+
+
+class PermissionsViewSet(Resource):
+    """
+    用户角色批量操作
+    """
+
+    def get(self):
+        data = [
+            {"id": 1, "name": "超级管理员", "intro": "所有权限", "createAt": "2023-03-23 22:23:22"},
+            {"id": 2, "name": "运营", "intro": "日常事务", "createAt": "2023-03-23 22:23:22"},
+            {"id": 3, "name": "人事", "intro": "所有权限", "createAt": "2023-03-23 22:23:22"},
+            {"id": 4, "name": "前端", "intro": "所有权限", "createAt": "2023-03-23 22:23:22"},
+            {"id": 5, "name": "后端", "intro": "所有权限", "createAt": "2023-03-23 22:23:22"},
+            {"id": 6, "name": "算法", "intro": "所有权限", "createAt": "2023-03-23 22:23:22"},
+            {"id": 7, "name": "UI设计", "intro": "所有权限", "createAt": "2023-03-23 22:23:22"}
+        ]
+        return_data = {
+            'list': data,
+            'totalCount': 12
+        }
+        return get_return_data(Success, return_data)

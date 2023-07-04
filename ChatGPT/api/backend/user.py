@@ -372,7 +372,7 @@ class UsersViewSet(Resource):
         ]
         return_data = {
             'list': data,
-            'totalCount': 10
+            'totalCount': 12
         }
         return get_return_data(Success, return_data)
 
