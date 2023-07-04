@@ -1,3 +1,4 @@
+from datetime import datetime
 from flask_restful import Resource
 from common.return_data import Success, get_return_data
 
@@ -61,10 +62,10 @@ class UsersViewSet(Resource):
                 "name": "票氏集团票少",
                 "realname": "god001",
                 "cellphone": "18812324989",
-                "enable": 1,
+                "enable": 0,
                 "department_Id": 1,
                 "roleId": 1,
-                "createAt": "2021-01-23: 23:34:11",
+                "createAt": str(datetime.now()),
                 "updateAt": "2021-01-24: 23:34:11",
                 # "role": {
                 #     "id": 1,
@@ -90,7 +91,7 @@ class UsersViewSet(Resource):
                 "enable": 1,
                 "department_Id": 1,
                 "roleId": 1,
-                "createAt": "2021-01-23: 23:34:11",
+                "createAt": "2021-01-23T23:34:11",
                 "updateAt": "2021-01-24: 23:34:11",
                 # "role": {
                 #     "id": 1,
@@ -294,6 +295,58 @@ class UsersViewSet(Resource):
                 "id": 10,
                 "name": "俞氏集团俞少",
                 "realname": "god010",
+                "cellphone": "18612324989",
+                "enable": 1,
+                "department_Id": 1,
+                "roleId": 1,
+                "createAt": "2021-01-23: 23:34:11",
+                "updateAt": "2021-01-24: 23:34:11",
+                # "role": {
+                #     "id": 1,
+                #     "name": "超级管理员",
+                #     "intro": "所有权限",
+                #     "createAt": "2021-01-23: 23:34:11",
+                #     "updateAt": "2021-01-24: 23:34:11",
+                # },
+                # "department": {
+                #     "id": 1,
+                #     "name": "研发部",
+                #     "parentId": None,
+                #     "createAt": "2021-01-23: 23:34:11",
+                #     "updateAt": "2021-01-24: 23:34:11",
+                #     "leader": "god"
+                # }
+            },
+            {
+                "id": 11,
+                "name": "冯氏集团冯少",
+                "realname": "god011",
+                "cellphone": "18612324989",
+                "enable": 1,
+                "department_Id": 1,
+                "roleId": 1,
+                "createAt": "2021-01-23: 23:34:11",
+                "updateAt": "2021-01-24: 23:34:11",
+                # "role": {
+                #     "id": 1,
+                #     "name": "超级管理员",
+                #     "intro": "所有权限",
+                #     "createAt": "2021-01-23: 23:34:11",
+                #     "updateAt": "2021-01-24: 23:34:11",
+                # },
+                # "department": {
+                #     "id": 1,
+                #     "name": "研发部",
+                #     "parentId": None,
+                #     "createAt": "2021-01-23: 23:34:11",
+                #     "updateAt": "2021-01-24: 23:34:11",
+                #     "leader": "god"
+                # }
+            },
+            {
+                "id": 12,
+                "name": "唐氏集团唐少",
+                "realname": "god012",
                 "cellphone": "18612324989",
                 "enable": 1,
                 "department_Id": 1,
