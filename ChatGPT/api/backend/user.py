@@ -43,8 +43,8 @@ class UserViewSet(Resource):
         }
         return get_return_data(Success, data)
 
-    def delete(self):
-        return get_return_data(Success)
+    def delete(self, id):
+        return get_return_data(Success, id)
 
     def patch(self):
         return get_return_data(Success)
