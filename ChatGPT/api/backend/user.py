@@ -8,11 +8,11 @@ class UserViewSet(Resource):
     用户CRUD
     """
 
-    def get(self, user_id):
+    def get(self, id):
         data = {
-            "id": user_id,
+            "id": id,
             "name": "god",
-            "realname": "god" + str(user_id),
+            "realname": "god" + str(id),
             "cellphone": "18812324989",
             "enable": 1,
             "createAt": "2021-01-23: 23:34:11",

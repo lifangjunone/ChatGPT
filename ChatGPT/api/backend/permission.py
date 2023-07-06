@@ -7,7 +7,7 @@ class PermissionViewSet(Resource):
     用户权限CRUD
     """
 
-    def get(self, role_id):
+    def get(self, id):
         data = [
             {
                 "children": [
