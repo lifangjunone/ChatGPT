@@ -5,6 +5,7 @@ from .login import LoginViewSet
 from .user import UserViewSet, UsersViewSet
 from .permission import PermissionViewSet, PermissionsViewSet
 from .shop import ShopsViewSet
+from .menu import MenusViewSet
 
 
 backend_manage_bp = Blueprint("backend_manage", __name__)
@@ -16,3 +17,4 @@ backend_manage.add_resource(UsersViewSet, "/users")
 backend_manage.add_resource(PermissionViewSet, "/role/<int:role_id>")
 backend_manage.add_resource(PermissionsViewSet, "/roles")
 backend_manage.add_resource(ShopsViewSet, "/shops")
+backend_manage.add_resource(MenusViewSet, "/menus")

@@ -1,13 +1,12 @@
 from flask_restful import Resource
-from common.return_data import Success, get_return_data
+from common.return_data import get_return_data, Success
 
 
-class PermissionViewSet(Resource):
+class MenusViewSet(Resource):
     """
-    用户权限CRUD
+    菜单CRUD
     """
-
-    def get(self, role_id):
+    def get(self):
         data = [
             {
                 "children": [
@@ -194,33 +193,6 @@ class PermissionViewSet(Resource):
                 "type": 1,
                 "url": "/main/story"
             }
-        ]
-        return get_return_data(Success, data)
-
-    def post(self):
-        return get_return_data(Success, {})
-
-    def delete(self):
-        return get_return_data(Success)
-
-    def patch(self):
-        return get_return_data(Success)
-
-
-class PermissionsViewSet(Resource):
-    """
-    用户角色批量操作
-    """
-
-    def get(self):
-        data = [
-            {"id": 1, "name": "超级管理员", "intro": "所有权限", "createAt": "2023-03-23 22:23:22"},
-            {"id": 2, "name": "运营", "intro": "日常事务", "createAt": "2023-03-23 22:23:22"},
-            {"id": 3, "name": "人事", "intro": "所有权限", "createAt": "2023-03-23 22:23:22"},
-            {"id": 4, "name": "前端", "intro": "所有权限", "createAt": "2023-03-23 22:23:22"},
-            {"id": 5, "name": "后端", "intro": "所有权限", "createAt": "2023-03-23 22:23:22"},
-            {"id": 6, "name": "算法", "intro": "所有权限", "createAt": "2023-03-23 22:23:22"},
-            {"id": 7, "name": "UI设计", "intro": "所有权限", "createAt": "2023-03-23 22:23:22"}
         ]
         return_data = {
             'list': data,
