@@ -12,10 +12,10 @@ class MenusViewSet(Resource):
                 "children": [
                     {
                         "children": [
-                            {"permission": "system:overview:create", "type": 3},
-                            {"permission": "system:overview:delete", "type": 3},
-                            {"permission": "system:overview:update", "type": 3},
-                            {"permission": "system:overview:query", "type": 3},
+                            {"permission": "system:overview:create", "type": 3, "name": "创建核心技术", "id": 1},
+                            {"permission": "system:overview:delete", "type": 3, "name": "删除核心技术", "id": 2},
+                            {"permission": "system:overview:update", "type": 3, "name": "修改核心技术", "id": 3},
+                            {"permission": "system:overview:query", "type": 3, "name": "查看核心技术", "id": 4},
                         ],
                         "icon": "\ue658",
                         "id": 3,
@@ -47,10 +47,10 @@ class MenusViewSet(Resource):
                 "children": [
                     {
                         "children": [
-                            {"permission": "system:user:create", "type": 3},
-                            {"permission": "system:user:delete", "type": 3},
-                            {"permission": "system:user:update", "type": 3},
-                            {"permission": "system:user:query", "type": 3},
+                            {"permission": "system:user:create", "type": 3, "name": "创建用户", "id": 5},
+                            {"permission": "system:user:delete", "type": 3, "name": "删除用户", "id": 6},
+                            {"permission": "system:user:update", "type": 3, "name": "修改用户", "id": 7},
+                            {"permission": "system:user:query", "type": 3, "name": "查看用户", "id": 8},
                         ],
                         "icon": "\ue8c8",
                         "id": 5,
@@ -62,10 +62,10 @@ class MenusViewSet(Resource):
                     },
                     {
                         "children": [
-                            {"permission": "system:department:create", "type": 3},
-                            {"permission": "system:department:delete", "type": 3},
-                            {"permission": "system:department:update", "type": 3},
-                            {"permission": "system:department:query", "type": 3},
+                            {"permission": "system:department:create", "type": 3, "name": "创建部门", "id": 9},
+                            {"permission": "system:department:delete", "type": 3, "name": "删除部门", "id": 10},
+                            {"permission": "system:department:update", "type": 3, "name": "修改部门", "id": 11},
+                            {"permission": "system:department:query", "type": 3, "name": "查看部门", "id": 12},
                         ],
                         "icon": "\ue608",
                         "id": 6,
@@ -77,10 +77,10 @@ class MenusViewSet(Resource):
                     },
                     {
                         "children": [
-                            {"permission": "system:menu:create", "type": 3},
-                            {"permission": "system:menu:delete", "type": 3},
-                            {"permission": "system:menu:update", "type": 3},
-                            {"permission": "system:menu:query", "type": 3},
+                            {"permission": "system:menu:create", "type": 3, "name": "创建菜单", "id": 13},
+                            {"permission": "system:menu:delete", "type": 3, "name": "删除菜单", "id": 14},
+                            {"permission": "system:menu:update", "type": 3, "name": "修改菜单", "id": 15},
+                            {"permission": "system:menu:query", "type": 3, "name": "查看菜单", "id": 16},
                         ],
                         "icon": "\ue64d",
                         "id": 7,
@@ -92,10 +92,10 @@ class MenusViewSet(Resource):
                     },
                     {
                         "children": [
-                            {"permission": "system:role:create", "type": 3},
-                            {"permission": "system:role:delete", "type": 3},
-                            {"permission": "system:role:update", "type": 3},
-                            {"permission": "system:role:query", "type": 3},
+                            {"permission": "system:role:create", "type": 3, "name": "创建角色", "id": 17},
+                            {"permission": "system:role:delete", "type": 3, "name": "删除角色", "id": 18},
+                            {"permission": "system:role:update", "type": 3, "name": "修改角色", "id": 19},
+                            {"permission": "system:role:query", "type": 3, "name": "查看角色", "id": 20},
                         ],
                         "icon": "\ue6a0",
                         "id": 8,
@@ -117,10 +117,10 @@ class MenusViewSet(Resource):
                 "children": [
                     {
                         "children": [
-                            {"permission": "system:category:create", "type": 3},
-                            {"permission": "system:category:delete", "type": 3},
-                            {"permission": "system:category:update", "type": 3},
-                            {"permission": "system:category:query", "type": 3},
+                            {"permission": "system:category:create", "type": 3, "name": "创建商品类别", "id": 21},
+                            {"permission": "system:category:delete", "type": 3, "name": "删除商品类别", "id": 22},
+                            {"permission": "system:category:update", "type": 3, "name": "修改商品类别", "id": 23},
+                            {"permission": "system:category:query", "type": 3, "name": "查看商品类别", "id": 24},
                         ],
                         "icon": "\ue603",
                         "id": 10,
@@ -132,10 +132,10 @@ class MenusViewSet(Resource):
                     },
                     {
                         "children": [
-                            {"permission": "system:shop:create", "type": 3},
-                            {"permission": "system:shop:delete", "type": 3},
-                            {"permission": "system:shop:update", "type": 3},
-                            {"permission": "system:shop:query", "type": 3},
+                            {"permission": "system:shop:create", "type": 3, "name": "创建商品", "id": 25},
+                            {"permission": "system:shop:delete", "type": 3, "name": "删除商品", "id": 26},
+                            {"permission": "system:shop:update", "type": 3, "name": "修改商品", "id": 27},
+                            {"permission": "system:shop:query", "type": 3, "name": "查看商品", "id": 28},
                         ],
                         "icon": "\ue62b",
                         "id": 11,
@@ -157,10 +157,10 @@ class MenusViewSet(Resource):
                 "children": [
                     {
                         "children": [
-                            {"permission": "system:chat:create", "type": 3},
-                            {"permission": "system:chat:delete", "type": 3},
-                            {"permission": "system:chat:update", "type": 3},
-                            {"permission": "system:chat:query", "type": 3},
+                            {"permission": "system:chat:create", "type": 3, "name": "创建故事", "id": 29},
+                            {"permission": "system:chat:delete", "type": 3, "name": "删除故事", "id": 30},
+                            {"permission": "system:chat:update", "type": 3, "name": "修改故事", "id": 31},
+                            {"permission": "system:chat:query", "type": 3, "name": "查看故事", "id": 32},
                         ],
                         "icon": "\ueaf5",
                         "id": 13,
@@ -172,10 +172,10 @@ class MenusViewSet(Resource):
                     },
                     {
                         "children": [
-                            {"permission": "system:story:create", "type": 3},
-                            {"permission": "system:story:delete", "type": 3},
-                            {"permission": "system:story:update", "type": 3},
-                            {"permission": "system:story:query", "type": 3},
+                            {"permission": "system:story:create", "type": 3, "name": "创建故事列表", "id": 33},
+                            {"permission": "system:story:delete", "type": 3, "name": "删除故事列表", "id": 34},
+                            {"permission": "system:story:update", "type": 3, "name": "修改故事列表", "id": 35},
+                            {"permission": "system:story:query", "type": 3, "name": "查看故事列表", "id": 36},
                         ],
                         "icon": "\ue624",
                         "id": 14,
