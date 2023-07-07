@@ -1,6 +1,8 @@
+from flask import request
 from datetime import datetime
 from flask_restful import Resource
 from common.return_data import Success, get_return_data
+import json
 
 
 class UserViewSet(Resource):
@@ -36,17 +38,14 @@ class UserViewSet(Resource):
         return get_return_data(Success, data)
 
     def post(self):
-        data = {
-            "id": 1,
-            "name": "god",
-            "token": "god chatgpt"
-        }
+        data = json.loads(request.data)
+        print(data)
         return get_return_data(Success, data)
 
     def delete(self, id):
         return get_return_data(Success, id)
 
-    def patch(self):
+    def patch(self, id):
         return get_return_data(Success)
 
 
@@ -63,25 +62,25 @@ class UsersViewSet(Resource):
                 "realname": "god001",
                 "cellphone": "18812324989",
                 "enable": 0,
-                "department_Id": 1,
+                "departmentId": 1,
                 "roleId": 1,
                 "createAt": str(datetime.now()),
                 "updateAt": "2021-01-24: 23:34:11",
-                # "role": {
-                #     "id": 1,
-                #     "name": "超级管理员",
-                #     "intro": "所有权限",
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                # },
-                # "department": {
-                #     "id": 1,
-                #     "name": "研发部",
-                #     "parentId": None,
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                #     "leader": "god"
-                # }
+                "role": {
+                    "id": 1,
+                    "name": "超级管理员",
+                    "intro": "所有权限",
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                },
+                "department": {
+                    "id": 1,
+                    "name": "研发部",
+                    "parentId": None,
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                    "leader": "god"
+                }
             },
             {
                 "id": 2,
@@ -89,25 +88,25 @@ class UsersViewSet(Resource):
                 "realname": "god002",
                 "cellphone": "18612324989",
                 "enable": 1,
-                "department_Id": 1,
+                "departmentId": 1,
                 "roleId": 1,
                 "createAt": "2021-01-23T23:34:11",
                 "updateAt": "2021-01-24: 23:34:11",
-                # "role": {
-                #     "id": 1,
-                #     "name": "超级管理员",
-                #     "intro": "所有权限",
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                # },
-                # "department": {
-                #     "id": 1,
-                #     "name": "研发部",
-                #     "parentId": None,
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                #     "leader": "god"
-                # }
+                "role": {
+                    "id": 1,
+                    "name": "超级管理员",
+                    "intro": "所有权限",
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                },
+                "department": {
+                    "id": 1,
+                    "name": "研发部",
+                    "parentId": None,
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                    "leader": "god"
+                }
             },
             {
                 "id": 3,
@@ -115,25 +114,25 @@ class UsersViewSet(Resource):
                 "realname": "god003",
                 "cellphone": "18612324989",
                 "enable": 1,
-                "department_Id": 1,
+                "departmentId": 1,
                 "roleId": 1,
                 "createAt": "2021-01-23: 23:34:11",
                 "updateAt": "2021-01-24: 23:34:11",
-                # "role": {
-                #     "id": 1,
-                #     "name": "超级管理员",
-                #     "intro": "所有权限",
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                # },
-                # "department": {
-                #     "id": 1,
-                #     "name": "研发部",
-                #     "parentId": None,
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                #     "leader": "god"
-                # }
+                "role": {
+                    "id": 1,
+                    "name": "超级管理员",
+                    "intro": "所有权限",
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                },
+                "department": {
+                    "id": 1,
+                    "name": "研发部",
+                    "parentId": None,
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                    "leader": "god"
+                }
             },
             {
                 "id": 4,
@@ -141,25 +140,25 @@ class UsersViewSet(Resource):
                 "realname": "god004",
                 "cellphone": "18612324989",
                 "enable": 1,
-                "department_Id": 1,
+                "departmentId": 1,
                 "roleId": 1,
                 "createAt": "2021-01-23: 23:34:11",
                 "updateAt": "2021-01-24: 23:34:11",
-                # "role": {
-                #     "id": 1,
-                #     "name": "超级管理员",
-                #     "intro": "所有权限",
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                # },
-                # "department": {
-                #     "id": 1,
-                #     "name": "研发部",
-                #     "parentId": None,
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                #     "leader": "god"
-                # }
+                "role": {
+                    "id": 1,
+                    "name": "超级管理员",
+                    "intro": "所有权限",
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                },
+                "department": {
+                    "id": 1,
+                    "name": "研发部",
+                    "parentId": None,
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                    "leader": "god"
+                }
             },
             {
                 "id": 5,
@@ -167,25 +166,25 @@ class UsersViewSet(Resource):
                 "realname": "god005",
                 "cellphone": "18612324989",
                 "enable": 1,
-                "department_Id": 1,
+                "departmentId": 1,
                 "roleId": 1,
                 "createAt": "2021-01-23: 23:34:11",
                 "updateAt": "2021-01-24: 23:34:11",
-                # "role": {
-                #     "id": 1,
-                #     "name": "超级管理员",
-                #     "intro": "所有权限",
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                # },
-                # "department": {
-                #     "id": 1,
-                #     "name": "研发部",
-                #     "parentId": None,
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                #     "leader": "god"
-                # }
+                "role": {
+                    "id": 1,
+                    "name": "超级管理员",
+                    "intro": "所有权限",
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                },
+                "department": {
+                    "id": 1,
+                    "name": "研发部",
+                    "parentId": None,
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                    "leader": "god"
+                }
             },
             {
                 "id": 6,
@@ -193,25 +192,25 @@ class UsersViewSet(Resource):
                 "realname": "god006",
                 "cellphone": "18612324989",
                 "enable": 1,
-                "department_Id": 1,
+                "departmentId": 1,
                 "roleId": 1,
                 "createAt": "2021-01-23: 23:34:11",
                 "updateAt": "2021-01-24: 23:34:11",
-                # "role": {
-                #     "id": 1,
-                #     "name": "超级管理员",
-                #     "intro": "所有权限",
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                # },
-                # "department": {
-                #     "id": 1,
-                #     "name": "研发部",
-                #     "parentId": None,
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                #     "leader": "god"
-                # }
+                "role": {
+                    "id": 1,
+                    "name": "超级管理员",
+                    "intro": "所有权限",
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                },
+                "department": {
+                    "id": 1,
+                    "name": "研发部",
+                    "parentId": None,
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                    "leader": "god"
+                }
             },
             {
                 "id": 7,
@@ -219,25 +218,25 @@ class UsersViewSet(Resource):
                 "realname": "god007",
                 "cellphone": "18612324989",
                 "enable": 1,
-                "department_Id": 1,
+                "departmentId": 1,
                 "roleId": 1,
                 "createAt": "2021-01-23: 23:34:11",
                 "updateAt": "2021-01-24: 23:34:11",
-                # "role": {
-                #     "id": 1,
-                #     "name": "超级管理员",
-                #     "intro": "所有权限",
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                # },
-                # "department": {
-                #     "id": 1,
-                #     "name": "研发部",
-                #     "parentId": None,
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                #     "leader": "god"
-                # }
+                "role": {
+                    "id": 1,
+                    "name": "超级管理员",
+                    "intro": "所有权限",
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                },
+                "department": {
+                    "id": 1,
+                    "name": "研发部",
+                    "parentId": None,
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                    "leader": "god"
+                }
             },
             {
                 "id": 8,
@@ -245,25 +244,25 @@ class UsersViewSet(Resource):
                 "realname": "god008",
                 "cellphone": "18612324989",
                 "enable": 1,
-                "department_Id": 1,
+                "departmentId": 1,
                 "roleId": 1,
                 "createAt": "2021-01-23: 23:34:11",
                 "updateAt": "2021-01-24: 23:34:11",
-                # "role": {
-                #     "id": 1,
-                #     "name": "超级管理员",
-                #     "intro": "所有权限",
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                # },
-                # "department": {
-                #     "id": 1,
-                #     "name": "研发部",
-                #     "parentId": None,
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                #     "leader": "god"
-                # }
+                "role": {
+                    "id": 1,
+                    "name": "超级管理员",
+                    "intro": "所有权限",
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                },
+                "department": {
+                    "id": 1,
+                    "name": "研发部",
+                    "parentId": None,
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                    "leader": "god"
+                }
             },
             {
                 "id": 9,
@@ -271,25 +270,25 @@ class UsersViewSet(Resource):
                 "realname": "god009",
                 "cellphone": "18612324989",
                 "enable": 1,
-                "department_Id": 1,
+                "departmentId": 1,
                 "roleId": 1,
                 "createAt": "2021-01-23: 23:34:11",
                 "updateAt": "2021-01-24: 23:34:11",
-                # "role": {
-                #     "id": 1,
-                #     "name": "超级管理员",
-                #     "intro": "所有权限",
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                # },
-                # "department": {
-                #     "id": 1,
-                #     "name": "研发部",
-                #     "parentId": None,
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                #     "leader": "god"
-                # }
+                "role": {
+                    "id": 1,
+                    "name": "超级管理员",
+                    "intro": "所有权限",
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                },
+                "department": {
+                    "id": 1,
+                    "name": "研发部",
+                    "parentId": None,
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                    "leader": "god"
+                }
             },
             {
                 "id": 10,
@@ -297,25 +296,25 @@ class UsersViewSet(Resource):
                 "realname": "god010",
                 "cellphone": "18612324989",
                 "enable": 1,
-                "department_Id": 1,
+                "departmentId": 1,
                 "roleId": 1,
                 "createAt": "2021-01-23: 23:34:11",
                 "updateAt": "2021-01-24: 23:34:11",
-                # "role": {
-                #     "id": 1,
-                #     "name": "超级管理员",
-                #     "intro": "所有权限",
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                # },
-                # "department": {
-                #     "id": 1,
-                #     "name": "研发部",
-                #     "parentId": None,
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                #     "leader": "god"
-                # }
+                "role": {
+                    "id": 1,
+                    "name": "超级管理员",
+                    "intro": "所有权限",
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                },
+                "department": {
+                    "id": 1,
+                    "name": "研发部",
+                    "parentId": None,
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                    "leader": "god"
+                }
             },
             {
                 "id": 11,
@@ -323,25 +322,25 @@ class UsersViewSet(Resource):
                 "realname": "god011",
                 "cellphone": "18612324989",
                 "enable": 1,
-                "department_Id": 1,
+                "departmentId": 1,
                 "roleId": 1,
                 "createAt": "2021-01-23: 23:34:11",
                 "updateAt": "2021-01-24: 23:34:11",
-                # "role": {
-                #     "id": 1,
-                #     "name": "超级管理员",
-                #     "intro": "所有权限",
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                # },
-                # "department": {
-                #     "id": 1,
-                #     "name": "研发部",
-                #     "parentId": None,
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                #     "leader": "god"
-                # }
+                "role": {
+                    "id": 1,
+                    "name": "超级管理员",
+                    "intro": "所有权限",
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                },
+                "department": {
+                    "id": 1,
+                    "name": "研发部",
+                    "parentId": None,
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                    "leader": "god"
+                }
             },
             {
                 "id": 12,
@@ -349,25 +348,25 @@ class UsersViewSet(Resource):
                 "realname": "god012",
                 "cellphone": "18612324989",
                 "enable": 1,
-                "department_Id": 1,
+                "departmentId": 1,
                 "roleId": 1,
                 "createAt": "2021-01-23: 23:34:11",
                 "updateAt": "2021-01-24: 23:34:11",
-                # "role": {
-                #     "id": 1,
-                #     "name": "超级管理员",
-                #     "intro": "所有权限",
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                # },
-                # "department": {
-                #     "id": 1,
-                #     "name": "研发部",
-                #     "parentId": None,
-                #     "createAt": "2021-01-23: 23:34:11",
-                #     "updateAt": "2021-01-24: 23:34:11",
-                #     "leader": "god"
-                # }
+                "role": {
+                    "id": 1,
+                    "name": "超级管理员",
+                    "intro": "所有权限",
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                },
+                "department": {
+                    "id": 1,
+                    "name": "研发部",
+                    "parentId": None,
+                    "createAt": "2021-01-23: 23:34:11",
+                    "updateAt": "2021-01-24: 23:34:11",
+                    "leader": "god"
+                }
             }
         ]
         return_data = {
