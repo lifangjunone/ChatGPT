@@ -9,7 +9,18 @@ class MenusViewSet(Resource):
     def get(self):
         data = [
             {
+
                 "children": [
+                    {
+                        "icon": "\ue66c",
+                        "children": None,
+                        "id": 4,
+                        "name": "商品统计",
+                        "parentId": 1,
+                        "sort": 2,
+                        "type": 2,
+                        "url": "/main/analysis/dashboard"
+                    },
                     {
                         "children": [
                             {"permission": "system:overview:create", "type": 3, "name": "创建核心技术", "id": 1},
@@ -24,16 +35,6 @@ class MenusViewSet(Resource):
                         "sort": 1,
                         "type": 2,
                         "url": "/main/analysis/overview"
-                    },
-                    {
-                        "icon": "\ue66c",
-                        "children": None,
-                        "id": 4,
-                        "name": "商品统计",
-                        "parentId": 1,
-                        "sort": 2,
-                        "type": 2,
-                        "url": "/main/analysis/dashboard"
                     }
                 ],
                 "icon": "\ue612",
